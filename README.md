@@ -192,4 +192,6 @@ Termina con:
 
 ---
 
+<img width="638" height="479" alt="image" src="https://github.com/user-attachments/assets/7668862f-8026-4e8b-b73f-62107d0cb001" />
+
 
