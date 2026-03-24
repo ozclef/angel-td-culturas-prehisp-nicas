@@ -3,6 +3,9 @@
 
 
 
+<img width="600" height="338" alt="image" src="https://github.com/user-attachments/assets/f969a6fa-ec1e-423e-ac6d-e9a5bd9b2459" />
+
+
 -----
 
 # 🏺 ¿Qué es la cultura prehispánica?
