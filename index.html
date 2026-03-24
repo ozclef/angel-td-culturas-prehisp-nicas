@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Prehispánico</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    #container {
+      position: relative;
+    }
+
+    img {
+      display: block;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <!-- MAPA -->
+  <img src="mapa_mexico.png" width="600">
+
+  <!-- CANVAS ENCIMA -->
+  <canvas id="lienzo" width="600" height="400"></canvas>
+</div>
+
+<script>
+const canvas = document.getElementById("lienzo");
+const ctx = canvas.getContext("2d");
+
+let dibujando = false;
+
+// iniciar dibujo
+canvas.addEventListener("mousedown", () => dibujando = true);
+
+// parar dibujo
+canvas.addEventListener("mouseup", () => {
+  dibujando = false;
+  ctx.beginPath();
+});
+
+// dibujar
+canvas.addEventListener("mousemove", dibujar);
+
+function dibujar(e) {
+  if (!dibujando) return;
+
+  ctx.lineWidth = 3;
+  ctx.lineCap = "round";
+  ctx.strokeStyle = "red";
+
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(e.offsetX, e.offsetY);
+}
+</script>
+
+</body>
+</html>
